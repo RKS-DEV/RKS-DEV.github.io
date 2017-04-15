@@ -1,0 +1,371 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" href="Images/onestop.png" style="height:30px;width:30px;" />
+    <title>OneStop: PostOffice</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="CustomCSS/PostOfficeStyle.css" rel="stylesheet" />
+
+
+</head>
+
+<body onload="xyz()">
+
+    <!--About Modal-->
+    <div class="modal fade " tabindex="-1" id="about" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="signinModalLabel" style="font-weight:600; font-size:15px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">ABOUT</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="custom5">
+                                <h4 style="font-family:breeze;text-align:center;font-size:25px;color:rgb(0, 118, 30)">About the site</h4><br /><br />
+                                <p style="font-size:17px;">The site was created to provide oneStop destination for all the information relating to Banks, Indian Post Office, News & Public Sector Hospital.</p><br />
+                                <p>This site will be gradually enhaced and more contents will be added on a regular basis.</p>
+                                <p>The upcoming feature are:</p>
+                                <ul>
+                                    <li>Ability to trace IP.</li>
+                                    <li>Global Currency Converter.</li>
+                                    <li>Time Conversion between different Time-Zones.</li>
+                                    <li>Mobile Operator & circle Tracker.</li>
+                                    <li>Weather related Information.</li>
+                                </ul><br /><br />
+                                <h4 style="font-family:breeze;text-align:center;font-size:22px;color:rgb(165, 13, 61)">About the Developers</h4><br />
+                            </div>
+
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                            <div class="thumbnail" style="background-color:rgb(234, 234, 234);padding:3px;">
+                                <div style="width:100%;height:150px;background-color:dodgerblue;">
+                                    <img src="Images/back7.jpg" style="width:100%;height:150px" /></div>
+                                <img src="Images/Rahul1.JPG" style="width:120px;height:120px;border-radius:50%;border:1px solid dodgerblue;margin-top:-75px;" />
+                                <h4 style=" font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;text-align:center;color:darkorange;">RAHUL KUMAR SINGH</h4>
+                                <div class="input-group">
+                                    <span class="glyphicon glyphicon-envelope input-group-addon " style="background-color:dodgerblue;color:white;"></span>
+                                    <input type="text" class="form-control cur" value="rahul1993rks@live.com" disabled="disabled" style="background-color:white;color:dodgerblue" />
+                                </div>
+                                <div class="input-group">
+                                    <span class="glyphicon glyphicon-earphone input-group-addon" style="background-color:dodgerblue;color:white;"></span>
+                                    <input type="text" class="form-control cur" value="+91-7014225030" disabled="disabled" style="background-color:white;color:dodgerblue" />
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                            <div class="thumbnail" style="background-color:rgb(234, 234, 234);padding:3px;">
+                                <div style="width:100%;height:150px;background-color:dodgerblue;">
+                                    <img src="Images/back4.jpg" style="width:100%;height:150px" /></div>
+                                <img src="Images/praveen.JPG" style="width:120px;height:120px;border-radius:50%;border:1px solid dodgerblue;margin-top:-75px;" />
+                                <h4 style=" font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;text-align:center;color:darkorange;">PRAVIN KUMAR</h4>
+                                <div class="input-group">
+                                    <span class="glyphicon glyphicon-envelope input-group-addon" style="background-color:dodgerblue;color:white;"></span>
+                                    <input type="text" class="form-control cur" value="prasadpraveen65@gmail.com" disabled="disabled" style="background-color:white;color:dodgerblue" />
+                                </div>
+                                <div class="input-group">
+                                    <span class="glyphicon glyphicon-earphone input-group-addon" style="background-color:dodgerblue;color:white;"></span>
+                                    <input type="text" class="form-control cur" value="+91-8696875784" disabled="disabled" style="background-color:white;color:dodgerblue" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4  col-lg-4 col-sm-4 col-xs-12">
+
+                            <div class="thumbnail" style="background-color:rgb(234, 234, 234);padding:3px;">
+                                <div style="width:100%;height:150px;background-color:dodgerblue;padding:0px;">
+                                    <img src="Images/back8.jpg" style="width:100%;height:150px" /></div>
+                                <img src="Images/Rahul1.JPG" style="width:120px;height:120px;border-radius:50%;border:1px solid dodgerblue;margin-top:-75px;" />
+                                <h4 style=" font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;text-align:center;color:darkorange;">DIVYANSH GARG</h4>
+                                <div class="input-group">
+                                    <span class="glyphicon glyphicon-envelope input-group-addon" style="background-color:dodgerblue;color:white;"></span>
+                                    <input type="text" class="form-control cur" value="rahul1993rks@live.com" disabled="disabled" style="background-color:white;color:dodgerblue" />
+                                </div>
+                                <div class="input-group">
+                                    <span class="glyphicon glyphicon-earphone input-group-addon" style="background-color:dodgerblue;color:white;"></span>
+                                    <input type="text" class="form-control cur" value="+91-7014225030" disabled="disabled" style="background-color:white;color:dodgerblue" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger pull-right">Close</button>&nbsp;
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--About Modal ends-->
+
+    <!--navbar-->
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+                <a class="navbar-brand" href="Home.html" style="font-family:breeze;"><span><img src="Images/onestop.png"  height="50" width=""/></span> <span style="color:dodgerblue">One</span><span style="color:rgb(28, 72, 118)">Stop</span> </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div style="margin-top:25px">
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="Home.html">HOME</a></li>
+                        <li data-toggle="modal" data-target="#about"><a href="#about">ABOUT</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <div class="bankdivemptynon"></div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="bankdivempty">
+                    <div class="list-group ">
+                        <a href="Bank.html" class="list-group-item ">Bank</a>
+                        <a href="#" class="list-group-item disabled">News</a>
+                        <a href="PostOffice.html" class="list-group-item active">Post Office</a>
+                        <a href="#" class="list-group-item disabled">Public Sector Hospital</a>
+                        <a href="Ip.html" class="list-group-item">IP Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+                <div class="bankdivempty">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#Pnametab" data-toggle="tab">Search Post Office By City</a>
+                        </li>
+                        <li>
+                            <a href="#Ppintab" data-toggle="tab">Search Post Office By Pin</a>
+                        </li>
+
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="Pnametab">
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <div class="tDiv">
+                                                <div class="panel panel-default">
+                                                    <div class="panel-body">
+                                                        <div class="input-group-sm">
+                                                            <label for="area">Enter Area:</label><br />
+                                                            <input type="text" class="input-sm" id="areaInput" />
+                                                            <button id="btnarea" class="btn btn-success btn-sm" onclick="getPostArea()"><span class="glyphicon glyphicon-search"></span> Search</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="outputArea"></div>
+                                                <script id="rawTemplateArea" type="text/x-handlebars-template">
+                                                    {{#each PostOffice}}
+                                                    <div style="margin-bottom:5px">
+                                                        <table class="table table-bordered table-hover table-condensed">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th>Name</td>
+                                                                        <td>{{Name}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>BranchType</th>
+                                                                    <td>{{BranchType}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Circle</th>
+                                                                    <td>{{Circle}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Country</th>
+                                                                    <td>{{Country}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>District</th>
+                                                                    <td>{{District}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Division</th>
+                                                                    <td>{{Division}}</td>
+                                                                </tr>
+
+                                                                <tr>
+                                                                    <th>PINCode</th>
+                                                                    <td>{{PINCode}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Region</th>
+                                                                    <td>{{Region}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>State</th>
+                                                                    <td>{{State}}</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th>Taluk</th>
+                                                                    <td>{{Taluk}}</td>
+                                                                </tr>
+                                                            </tbody>
+                                                    </div>
+                                            </div>
+                                            {{/each}}
+                                            </script>
+                                            <script src="handlebars-v4.0.5.js"></script>
+                                            <div id='alrtArea' class="alert alert-danger collapse ">
+                                                <a id='clsArea' class="close" href="#">&times;</a>
+                                                <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error!</strong><span> No records found.</span>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="tDiv2">
+                                            <h4 class="text-danger">Search Post Office by area.</h4>
+                                            <p class="text-warning">Enter the area and instantly find out all the details of the Post Offices in that particular area.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="tab-pane fade in" id="Ppintab">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-7">
+                                        <div class="tDiv">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <div class="input-group-sm">
+                                                        <label for="pin">Enter PIN:</label><br />
+                                                        <input type="text" class="input-sm" id="pinInput" />
+                                                        <button id="btnpin" class="btn btn-success btn-sm" onclick="getPostPin()"><span class="glyphicon glyphicon-search"></span> Search</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div id="outputPin"></div>
+
+                                            <script id="rawTemplatePin" type="text/x-handlebars-template">
+                                                {{#each PostOffice}}
+                                                <div style="margin-bottom:5px">
+                                                    <table class="table table-bordered table-hover table-condensed">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>Name</td>
+                                                                    <td>{{Name}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>BranchType</th>
+                                                                <td>{{BranchType}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Circle</th>
+                                                                <td>{{Circle}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Country</th>
+                                                                <td>{{Country}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>District</th>
+                                                                <td>{{District}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Division</th>
+                                                                <td>{{Division}}</td>
+                                                            </tr>
+
+                                                            <tr>
+                                                                <th>PINCode</th>
+                                                                <td>{{PINCode}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Region</th>
+                                                                <td>{{Region}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>State</th>
+                                                                <td>{{State}}</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>Taluk</th>
+                                                                <td>{{Taluk}}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                </div>
+                                        </div>
+                                        {{/each}}
+                                        </script>
+                                        <div id='alrtPin' class="alert alert-danger collapse ">
+                                            <a id='clsPin' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error!</strong><span> No records found.</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="tDiv2">
+                                        <h4 class="text-danger">What is PIN Code?</h4>
+                                        <p class="text-warning">A Postal Index Number or PIN or Pincode is a code in the post office numbering or post code system used by India Post, the Indian postal administration. The code is six digits long.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="bankfooter">
+                <p class="foottext">&copy 2017 | Designed, Developed & Maintained by <a href="mailto:rahul1993rks@live.com"><span class="hyper">Rahul Kumar Singh</span></a></p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+    <!--navbar-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="CustomJS/PostOfficeScript.js"></script>
+</body>
+
+</html>

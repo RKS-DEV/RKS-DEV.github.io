@@ -1,0 +1,58 @@
+﻿@font-face {
+    font-family: "breeze";
+    src: url('C:/Users/dell/Desktop/Major Project/CustomFonts/Breeze.ttf');
+}
+
+body {
+    background-color: rgb(229, 229, 229);
+}
+
+.bankdivemptynon {
+    margin-top: 0px;
+    margin-left: 3px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    padding: 10px;
+    background-color: rgb(229, 229, 229);
+    min-height: 75px;
+}
+
+.bankdivempty {
+    margin-top: 0px;
+    margin-left: 3px;
+    margin-bottom: 0px;
+    margin-right: 3px;
+    padding: 10px;
+    background-color: white;
+    min-height: 70px;
+}
+
+.abc {
+    margin: 3px;
+    padding: 10px;
+    background-color: red;
+    min-height: 75px;
+}
+
+.bankfooter {
+    min-height: 50px;
+    background-color: rgba(28, 72, 118, .9);
+    margin: 3px;
+    padding: 10px;
+}
+
+.foottext {
+    color: dodgerblue;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+.modal-header {
+    background-color: rgba(28, 72, 118, .9);
+}
+
+.modal-title {
+    color: white;
+}
