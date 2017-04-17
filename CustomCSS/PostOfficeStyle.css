@@ -1,10 +1,17 @@
 ﻿@font-face {
     font-family: "breeze";
-    src: url('C:/Users/dell/Desktop/Major Project/CustomFonts/Breeze.ttf');
+    src: url('Breeze.ttf');
 }
 
 body {
     background-color: rgb(229, 229, 229);
+}
+
+.cont {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .bankdivemptynon {
@@ -66,4 +73,29 @@ body {
 
 .modal-title {
     color: white;
+}
+
+@media (max-width: 500px) {
+    .cont {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cont {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .cont {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cont {
+        width: 1170px;
+    }
 }

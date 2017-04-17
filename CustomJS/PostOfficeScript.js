@@ -28,6 +28,7 @@ function getPostArea() {
 
     var postofficename = document.getElementById('areaInput').value;
     var ourRequest = new XMLHttpRequest();
+
     ourRequest.open('GET', 'http://postalpincode.in/api/postoffice/' + postofficename);
     ourRequest.onload = function() {
         if (ourRequest.status >= 200 && ourRequest.status < 400) {

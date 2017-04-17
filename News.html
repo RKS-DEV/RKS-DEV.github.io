@@ -16,7 +16,7 @@
 
 </head>
 
-<body>
+<body onload="abc()">
 
 
 
@@ -86,15 +86,15 @@
                             <div class="thumbnail" style="background-color:rgb(234, 234, 234);padding:3px;">
                                 <div style="width:100%;height:150px;background-color:dodgerblue;padding:0px;">
                                     <img src="Images/back8.jpg" style="width:100%;height:150px" /></div>
-                                <img src="Images/Rahul.JPG" style="width:120px;height:120px;border-radius:50%;border:1px solid dodgerblue;margin-top:-75px;" />
+                                <img src="Images/div.JPG" style="width:120px;height:120px;border-radius:50%;border:1px solid dodgerblue;margin-top:-75px;" />
                                 <h4 style=" font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;text-align:center;color:darkorange;">DIVYANSH GARG</h4>
                                 <div class="input-group">
                                     <span class="glyphicon glyphicon-envelope input-group-addon" style="background-color:dodgerblue;color:white;"></span>
-                                    <input type="text" class="form-control cur" value="rahul1993rks@live.com" disabled="disabled" style="background-color:white;color:dodgerblue" />
+                                    <input type="text" class="form-control cur" value="gdivyansh2012@gmail.com" disabled="disabled" style="background-color:white;color:dodgerblue" />
                                 </div>
                                 <div class="input-group">
                                     <span class="glyphicon glyphicon-earphone input-group-addon" style="background-color:dodgerblue;color:white;"></span>
-                                    <input type="text" class="form-control cur" value="+91-7014225030" disabled="disabled" style="background-color:white;color:dodgerblue" />
+                                    <input type="text" class="form-control cur" value="+91-8003314080" disabled="disabled" style="background-color:white;color:dodgerblue" />
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button class="btn btn-danger pull-right">Close</button>&nbsp;
+                    <button class="btn btn-danger pull-right" data-dismiss="modal" aria-label="Close">Close</button>&nbsp;
 
                 </div>
 
@@ -116,20 +116,20 @@
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="margin-right:20px;">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-                <a class="navbar-brand" href="Home.html" style="font-family:breeze;"><span><img src="Images/onestop.png"  height="50" width=""/></span> <span style="color:dodgerblue">One</span><span style="color:rgb(28, 72, 118)">Stop</span> </a>
+                <a class="navbar-brand" href="index.html" style="font-family:breeze;"><span><img src="Images/onestop.png"  height="50" width=""/></span> <span style="color:dodgerblue">One</span><span style="color:rgb(28, 72, 118)">Stop</span> </a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div style="margin-top:25px">
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="Home.html">HOME</a></li>
+                        <li><a href="index.html">HOME</a></li>
                         <li data-toggle="modal" data-target="#about"><a href="#about">ABOUT</a></li>
                     </ul>
                 </div>
@@ -138,7 +138,7 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <div class="container">
+    <div class="cont">
         <div class="row">
 
             <div class="col-lg-12">
@@ -150,7 +150,7 @@
                         <a href="Bank.html" class="list-group-item ">Bank</a>
                         <a href="News.html" class="list-group-item active">News</a>
                         <a href="PostOffice.html" class="list-group-item">Post Office</a>
-                        <a href="Hospital.html" class="list-group-item">Public Sector Hospital</a>
+
                         <a href="Ip.html" class="list-group-item">IP Details</a>
                     </div>
                 </div>
@@ -159,36 +159,163 @@
                 <div class="bankdivempty">
                     <ul class="nav nav-tabs">
                         <li class="active">
-                            <a href="#hometab" data-toggle="tab">Home</a>
+                            <a href="#Nationaltab" data-toggle="tab">National</a>
                         </li>
                         <li>
-                            <a href="#contacttab" data-toggle="tab">Contact</a>
+                            <a href="#Internationaltab" data-toggle="tab">International</a>
                         </li>
                         <li>
-                            <a href="#addresstab" data-toggle="tab">Address</a>
+                            <a href="#Technologytab" data-toggle="tab">Technology</a>
+                        </li>
+                        <li>
+                            <a href="#Sportstab" data-toggle="tab">Sports</a>
                         </li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="hometab">
-
+                        <div class="tab-pane fade in active" id="Nationaltab">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="abc"></div>
+                                    <div class="abc">
+                                        <!--national news section-->
+                                        <div id="outputNational"></div>
+
+                                        <script id="rawTemplateNational" type="text/x-handlebars-template">
+                                            {{#each articles}}
+
+
+                                            <div class="thumbnail">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <img src="{{urlToImage}}" class="img-responsive" />
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <h4 style="color:chocolate">{{title}}</h4>
+                                                        <h5><span style="color:rgba(0,0,0,.6);"><b>Author:</b></span><span style="font-weight:700;"> {{author}}</span></h5>
+                                                        <p><span style="color:lightslategrey; font-weight:800;">Description:</span> {{description}}</p>
+                                                        <a href="{{url}}" target="_blank" class="pull-right" style="padding-right:10px;">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{/each}}
+                                        </script>
+                                        <script src="handlebars-v4.0.5.js"></script>
+                                        <div id='alrtn' class="alert alert-info ">
+                                            <a id='clsn' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Attention!</strong><span> National news headlines is loading..</span>
+
+                                        </div>
+
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
-                        <div class="tab-pane fade in" id="contacttab">
+
+                        <div class="tab-pane fade in" id="Internationaltab">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="abc"></div>
+                                    <div class="abc">
+                                        <div id="outputInternational"></div>
+
+                                        <script id="rawTemplateInternational" type="text/x-handlebars-template">
+                                            {{#each articles}}
+
+
+                                            <div class="thumbnail">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <img src="{{urlToImage}}" class="img-responsive" />
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <h4 style="color:chocolate">{{title}}</h4>
+                                                        <h5><span style="color:rgba(0,0,0,.6);"><b>Author:</b></span><span style="font-weight:700;"> {{author}}</span></h5>
+                                                        <p><span style="color:lightslategrey; font-weight:800;">Description:</span> {{description}}</p>
+                                                        <a href="{{url}}" target="_blank" class="pull-right" style="padding-right:10px;">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{/each}}
+                                        </script>
+
+                                        <div id='alrti' class="alert alert-danger collapse ">
+                                            <a id='clsi' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Attention!</strong><span> International news headlines is loading..</span>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-pane fade in" id="addresstab">
+                        <div class="tab-pane fade in" id="Technologytab">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <div class="abc"></div>
+                                    <div class="abc">
+                                        <div id="outputTech"></div>
+
+                                        <script id="rawTemplateTech" type="text/x-handlebars-template">
+                                            {{#each articles}}
+
+
+                                            <div class="thumbnail">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <img src="{{urlToImage}}" class="img-responsive" />
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <h4 style="color:chocolate">{{title}}</h4>
+                                                        <h5><span style="color:rgba(0,0,0,.6);"><b>Author:</b></span><span style="font-weight:700;"> {{author}}</span></h5>
+                                                        <p><span style="color:lightslategrey; font-weight:800;">Description:</span> {{description}}</p>
+                                                        <a href="{{url}}" target="_blank" class="pull-right" style="padding-right:10px;">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{/each}}
+                                        </script>
+
+                                        <div id='alrtt' class="alert alert-danger collapse ">
+                                            <a id='clst' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Attention!</strong><span> International news headlines is loading..</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade in" id="Sportstab">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="abc">
+                                        <div id="outputSports"></div>
+
+                                        <script id="rawTemplateSports" type="text/x-handlebars-template">
+                                            {{#each articles}}
+
+
+                                            <div class="thumbnail">
+                                                <div class="row">
+                                                    <div class="col-lg-4">
+                                                        <img src="{{urlToImage}}" class="img-responsive" />
+                                                    </div>
+                                                    <div class="col-lg-8">
+                                                        <h4 style="color:chocolate">{{title}}</h4>
+                                                        <h5><span style="color:rgba(0,0,0,.6);"><b>Author:</b></span><span style="font-weight:700;"> {{author}}</span></h5>
+                                                        <p><span style="color:lightslategrey; font-weight:800;">Description:</span> {{description}}</p>
+                                                        <a href="{{url}}" target="_blank" class="pull-right" style="padding-right:10px;">Read more</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {{/each}}
+                                        </script>
+
+                                        <div id='alrts' class="alert alert-danger collapse ">
+                                            <a id='clss' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Attention!</strong><span> International news headlines is loading..</span>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -199,7 +326,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="bankfooter">
-                    <p class="foottext">&copy 2017 | Designed, Developed & Maintained by <a href="mailto:rahul1993rks@live.com"><span class="hyper">Rahul Kumar Singh</span></a></p>
+                    <p class="foottext">&copy; 2017 | Designed, Developed & Maintained by <a href="mailto:rahul1993rks@live.com"><span class="hyper">Rahul Kumar Singh</span></a></p>
                 </div>
             </div>
         </div>
@@ -210,6 +337,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="CustomJS/NewsScript.js"></script>
 </body>
 
 </html>

@@ -1,11 +1,18 @@
 ﻿@font-face {
     font-family: "breeze";
-    src: url('C:/Users/dell/Desktop/Major Project/CustomFonts/Breeze.ttf');
+    src: url('Breeze.ttf');
 }
 
 @font-face {
     font-family: AlphaWood;
-    src: url('C:/Users/dell/Desktop/Major Project/CustomFonts/AlphaWood.ttf');
+    src: url('AlphaWood.ttf');
+}
+
+.cont {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .abc {
@@ -188,5 +195,30 @@ body {
 @media only screen and (max-width:361px) {
     .txtpara {
         font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cont {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media (min-width: 768px) {
+    .cont {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .cont {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cont {
+        width: 1170px;
     }
 }
