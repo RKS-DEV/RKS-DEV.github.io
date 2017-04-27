@@ -177,8 +177,9 @@
                                                         <div class="input-group-sm">
                                                             <label for="area">Enter Area:</label><br />
                                                             <input type="text" class="input-sm" id="areaInput" />
-                                                            <button id="btnarea" class="btn btn-success btn-sm" onclick="getPostArea()"><span class="glyphicon glyphicon-search"></span> Search</button>
-                                                        </div>
+                                                            <button id="btnarea" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search"></span> Search</button>
+                                                        </div><br/>
+                                                        <img id="loadingArea" class="img-responsive" style="margin: 0 auto;display:none" src="Images/load6.gif">
                                                     </div>
                                                 </div>
                                                 <div id="outputArea"></div>
@@ -239,6 +240,16 @@
                                                 <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error!</strong><span> No records found.</span>
 
                                             </div>
+                                            <div id='alrtArea3' class="alert alert-warning collapse ">
+                                                <a id='clsArea3' class="close" href="#">&times;</a>
+                                                <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Warning! </strong><span>Field is blank.</span>
+
+                                            </div>
+                                            <div id='alrtArea2' class="alert alert-info collapse ">
+                                                <a id='clsArea2' class="close" href="#">&times;</a>
+                                                <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Attention!</strong><span> <p>Please enable CORS Extension on your browser. If you are using Chrome;</p><p style="color:red;">You can download one at: <a target="_blank" href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=chrome-app-launcher-info-dialog"><u>Chrome Web Store.</u></a></p></span>
+
+                                            </div>
 
 
                                         </div>
@@ -266,8 +277,9 @@
                                                     <div class="input-group-sm">
                                                         <label for="pin">Enter PIN:</label><br />
                                                         <input type="text" class="input-sm" id="pinInput" />
-                                                        <button id="btnpin" class="btn btn-success btn-sm" onclick="getPostPin()"><span class="glyphicon glyphicon-search"></span> Search</button>
-                                                    </div>
+                                                        <button id="btnpin" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search"></span> Search</button>
+                                                    </div><br/>
+                                                    <img id="loading" class="img-responsive" style="margin: 0 auto;display:none" src="Images/load6.gif">
                                                 </div>
                                             </div>
 
@@ -327,6 +339,16 @@
                                         <div id='alrtPin' class="alert alert-danger collapse ">
                                             <a id='clsPin' class="close" href="#">&times;</a>
                                             <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error!</strong><span> No records found.</span>
+
+                                        </div>
+                                        <div id='alrtPin3' class="alert alert-warning collapse ">
+                                            <a id='clsPin3' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Warning! </strong><span>Field is blank.</span>
+
+                                        </div>
+                                        <div id='alrtPin2' class="alert alert-info collapse ">
+                                            <a id='clsPin2' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Attention!</strong><span> <p>Please enable CORS Extension on your browser. If you are using Chrome;</p><p style="color:red;">You can download one at: <a target="_blank" href="https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=chrome-app-launcher-info-dialog"><u>Chrome Web Store.</u></a></p></span>
 
                                         </div>
                                     </div>
