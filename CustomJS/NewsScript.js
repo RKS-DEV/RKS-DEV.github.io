@@ -12,6 +12,13 @@ function getNational() {
 
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=latest&apiKey=69e7fad93b294937beb6ec4d16434e2c');
+    ourRequest.onloadstart = function() {
+
+        loadnews.style.display = 'block';
+    }
+    ourRequest.onloadend = function() {
+        loadnews.style.display = 'none';
+    }
     ourRequest.onload = function() {
         if (ourRequest.status >= 200 && ourRequest.status < 400) {
             var ourData = JSON.parse(ourRequest.responseText);
@@ -42,7 +49,7 @@ function createHtmlNAtional(serverData) {
     var compiledTemplate = Handlebars.compile(rawTemplate);
     var generatedTemplate = compiledTemplate(serverData);
 
-    $('#alrtn').hide();
+
 
     var reslt = document.getElementById('outputNational');
     reslt.innerHTML = generatedTemplate;
@@ -50,7 +57,7 @@ function createHtmlNAtional(serverData) {
 }
 
 function warnNational() {
-    $('#alrtn').show('fade');
+
 
     $('#outputNational').hide();
 

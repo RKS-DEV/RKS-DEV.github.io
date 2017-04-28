@@ -179,8 +179,10 @@
                                                         <div class="input-group-sm">
                                                             <label for="ifsc">Enter IFSC code:</label><br />
                                                             <input type="text" class="input-sm" id="ifscInput" />
-                                                            <button id="btnifsc" class="btn btn-success btn-sm" onclick="getIfscInfo()"><span class="glyphicon glyphicon-search"></span> Search</button>
+                                                            <button id="btnifsc" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search"></span> Search</button>
                                                         </div>
+                                                        <br/>
+                                                        <img id="loadingifsc" class="img-responsive" style="margin: 0 auto;display:none" src="Images/load6.gif">
                                                     </div>
                                                 </div>
 
@@ -241,6 +243,16 @@
                                                 <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error!</strong><span> Inavalid IFSC code.</span>
 
                                             </div>
+                                            <div id='alrtifsc2' class="alert alert-warning collapse ">
+                                                <a id='clsifsc2' class="close" href="#">&times;</a>
+                                                <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Warning! </strong><span>Field is blank.</span>
+
+                                            </div>
+                                            <div id='alrtifsc3' class="alert alert-danger collapse ">
+                                                <a id='clsifsc3' class="close" href="#">&times;</a>
+                                                <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error! </strong><span>Problem in the network.</span>
+
+                                            </div>
 
                                             <script src="handlebars-v4.0.5.js"></script>
 
@@ -273,8 +285,10 @@
                                                     <div class="input-group-sm">
                                                         <label for="ifsc">Enter MICR code:</label><br />
                                                         <input type="text" class="input-sm" id="micrInput" />
-                                                        <button id="btnmicr" class="btn btn-success btn-sm" onclick="getMircInfo()"><span class="glyphicon glyphicon-search"></span> Search</button>
+                                                        <button id="btnmicr" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search"></span> Search</button>
                                                     </div>
+                                                    <br/>
+                                                    <img id="loadingmicr" class="img-responsive" style="margin: 0 auto;display:none" src="Images/load6.gif">
                                                 </div>
                                             </div>
 
@@ -333,6 +347,16 @@
                                             <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error!</strong><span> Inavalid MICR code.</span>
 
                                         </div>
+                                        <div id='alrtmicr2' class="alert alert-warning collapse ">
+                                            <a id='clsmicr2' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Warning! </strong><span>Field is blank.</span>
+
+                                        </div>
+                                        <div id='alrtmicr3' class="alert alert-danger collapse ">
+                                            <a id='clsmicr3' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error! </strong><span>Problem in the network.</span>
+
+                                        </div>
 
 
 
@@ -355,11 +379,12 @@
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="tDiv" style="background-color: white;">
-                                        <div id='alrtmicr' class="alert alert-info " data-dismiss="alert">
-                                            <a id='clsmicr' class="close" href="#">&times;</a>
+                                        <div id='alrtsoon' class="alert alert-info ">
+                                            <a id='clssoon' class="close" href="#">&times;</a>
                                             <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Attention!</strong><span> Development in progess.</span>
-
                                         </div>
+
+                                        <img class="img-responsive" style="margin: 0 auto;" src="Images/load2.gif">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">

@@ -218,6 +218,12 @@
                                                 <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Attention!</strong><span> Your ip details is loading.</span>
 
                                             </div>
+                                            <div id='alrtYourIp2' class="alert alert-danger">
+                                                <a id='clsYourIp2' class="close" href="#">&times;</a>
+                                                <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error!</strong><span> Problem in the network.</span>
+
+                                            </div>
+                                            <img id="loadyourip" class="img-responsive" src="Images/load8.gif">
 
 
                                         </div>
@@ -247,8 +253,9 @@
                                                     <div class="input-group-sm">
                                                         <label for="pin">Enter an IP:</label><br />
                                                         <input type="text" class="input-sm" id="ipInput" />
-                                                        <button id="btnip" class="btn btn-success btn-sm" onclick="getIpDetails()"><span class="glyphicon glyphicon-search"></span> Search</button>
+                                                        <button id="btnip" class="btn btn-success btn-sm"><span class="glyphicon glyphicon-search"></span> Search</button>
                                                     </div>
+                                                    <img id="loadip" class="img-responsive" style="display:none" src="Images/load8.gif">
                                                 </div>
                                             </div>
 
@@ -291,9 +298,19 @@
                                         </div>
                                         {{/isp}}
                                         </script>
-                                        <div id='alrtFindIp' class="alert alert-danger collapse ">
+                                        <div id='alrtFindIp' class="alert alert-danger  ">
                                             <a id='clsFindIp' class="close" href="#">&times;</a>
                                             <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error!</strong><span> Inappropriate IP.</span>
+
+                                        </div>
+                                        <div id='alrtFindIp2' class="alert alert-info  ">
+                                            <a id='clsFindIp2' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Attentio!</strong><span> Feild is empty.</span>
+
+                                        </div>
+                                        <div id='alrtFindIp3' class="alert alert-danger ">
+                                            <a id='clsFindIp3' class="close" href="#">&times;</a>
+                                            <strong><span class="glyphicon glyphicon glyphicon-info-sign"></span> Error!</strong><span> Unable to connect to the internet.</span>
 
                                         </div>
                                     </div>

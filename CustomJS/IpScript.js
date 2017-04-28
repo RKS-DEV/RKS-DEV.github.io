@@ -1,17 +1,38 @@
 function xyz() {
+    var btnip = document.getElementById('btnip');
+    btnip.addEventListener('click', function() {
+        var ipInput = document.getElementById('ipInput').value;
+        if (ipInput != "") {
+            getIpDetails();
 
+        } else {
+            $('#outputFindIp').hide();
+            $('#alrtFindIp').hide('fade');
+            $('#alrtFindIp3').hide('fade');
+            $('#alrtFindIp2').show('fade');
+        }
+    })
     var y = document.getElementById('ipInput');
     y.addEventListener('keydown', function(event) {
         if (event.keyCode == 13) {
             document.getElementById('btnip').click();
         }
     })
+    $('#alrtFindIp').hide('fade');
+    $('#alrtFindIp2').hide('fade');
+    $('#alrtFindIp3').hide('fade');
     $('#clsYourIp').click(function() {
-        $('#alrtAYourIp').hide();
+        $('#alrtYourIp').hide('fade');
     })
 
     $('#clsFindIp').click(function() {
-        $('#alrtFindIp').hide();
+        $('#alrtFindIp').hide('fade');
+    })
+    $('#clsFindIp2').click(function() {
+        $('#alrtFindIp2').hide('fade');
+    })
+    $('#clsFindIp3').click(function() {
+        $('#alrtFindIp3').hide('fade');
     })
 
     getYourIp();
@@ -21,9 +42,17 @@ function xyz() {
 
 function getYourIp() {
 
-
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'http://ip-api.com/json');
+    ourRequest.onloadstart = function() {
+        $('#alrtYourIp2').hide();
+        $('#alrtAYourIp').show('fade');
+        //  loadyourip.style.display = 'block';
+    }
+    ourRequest.onloadend = function() {
+        loadyourip.style.display = 'none';
+        $('#alrtYourIp').hide();
+    }
     ourRequest.onload = function() {
         if (ourRequest.status >= 200 && ourRequest.status < 400) {
             var ourData = JSON.parse(ourRequest.responseText);
@@ -40,6 +69,7 @@ function getYourIp() {
 
     };
     ourRequest.onerror = function() {
+        $('#alrtYourIp2').show('fade');
         console.log('Problem in the network.');
     }
     ourRequest.send();
@@ -48,7 +78,7 @@ function getYourIp() {
 
 function createHtmlYourIp(serverData) {
     console.log(serverData);
-    $('#outputYourIp').show('fade');
+
     var rawTemplate = document.getElementById('rawTemplateYourIp').innerHTML;
     var compiledTemplate = Handlebars.compile(rawTemplate);
     var generatedTemplate = compiledTemplate(serverData);
@@ -70,6 +100,7 @@ function createHtmlYourIp(serverData) {
 }
 
 function warnYourIp(data) {
+
     $('#alrtYourIp').show('fade');
     $('#outputYourIp').hide();
 
@@ -80,9 +111,20 @@ function warnYourIp(data) {
 // search an ip details
 
 function getIpDetails() {
+    $('#outputFindIp').hide();
     var IP = document.getElementById('ipInput').value;
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'http://ip-api.com/json/' + IP);
+
+    ourRequest.onloadstart = function() {
+        $('#alrtFindIp2').hide();
+        $('#alrtFindIp').hide();
+        loadip.style.display = 'block';
+    }
+    ourRequest.onloadend = function() {
+        loadip.style.display = 'none';
+
+    }
     ourRequest.onload = function() {
         if (ourRequest.status >= 200 && ourRequest.status < 400) {
             var ourData = JSON.parse(ourRequest.responseText);
@@ -100,7 +142,10 @@ function getIpDetails() {
 
     };
     ourRequest.onerror = function() {
-        console.log('Problem in the network.');
+        $('#alrtFindIp3').show('fade');
+        // $('#alrtFindIp2').hide();
+        // $('#alrtFindIp3').hide();
+        console.log('Problem in the networkasdasdas.');
     }
     ourRequest.send();
 
@@ -108,7 +153,7 @@ function getIpDetails() {
 
 function createHtmlFindIp(serverData) {
     console.log(serverData);
-    $('#outputFindIp').show('fade');
+    $('#outputFindIp').show();
     var rawTemplate = document.getElementById('rawTemplateFindIp').innerHTML;
     var compiledTemplate = Handlebars.compile(rawTemplate);
     var generatedTemplate = compiledTemplate(serverData);
@@ -130,6 +175,7 @@ function createHtmlFindIp(serverData) {
 }
 
 function warnFindIp(data) {
+    $('#alrtFindIp2').hide('fade');
     $('#alrtFindIp').show('fade');
     $('#outputFindIp').hide();
 
