@@ -8,7 +8,7 @@ function xyz() {
         if (pin_no != '') {
             getPostPin();
         } else {
-
+            $('#outputPin').hide();
             $('#alrtPin3').show('fade');
         }
 
@@ -21,7 +21,7 @@ function xyz() {
         if (area != '') {
             getPostArea();
         } else {
-
+            $('#outputArea').hide();
             $('#alrtArea3').show('fade');
         }
 
@@ -64,6 +64,7 @@ function xyz() {
 
 function getPostArea() {
     $('#outputArea').hide();
+    $('#alrtArea3').hide('fade');
     var loadArea = document.getElementById('loadingArea');
     var postofficename = document.getElementById('areaInput').value;
     var ourRequest = new XMLHttpRequest();
@@ -134,6 +135,7 @@ function warnArea(data) {
 
 function getPostPin() {
     // move();
+    $('#alrtPin3').hide('fade');
     $('#outputPin').hide();
     var load = document.getElementById('loading');
     //load.style.display = "none";
