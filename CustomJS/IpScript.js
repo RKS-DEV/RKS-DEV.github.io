@@ -46,7 +46,7 @@ function getYourIp() {
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'http://ip-api.com/json');
     ourRequest.onloadstart = function() {
-        $('#alrtYourIp2').hide();
+
         $('#alrtAYourIp').show('fade');
         //  loadyourip.style.display = 'block';
     }
