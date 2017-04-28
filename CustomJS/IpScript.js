@@ -21,6 +21,7 @@ function xyz() {
     $('#alrtFindIp').hide('fade');
     $('#alrtFindIp2').hide('fade');
     $('#alrtFindIp3').hide('fade');
+    $('#alrtYourIp2').hide('fade');
     $('#clsYourIp').click(function() {
         $('#alrtYourIp').hide('fade');
     })
