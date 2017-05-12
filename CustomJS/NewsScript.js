@@ -1,4 +1,15 @@
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+
+});
+
 function abc() {
+
+    /* setInterval(getNational, 5000);
+    setInterval(getInter, 5000);
+    setInterval(getSports, 5000);
+    setInterval(getTech, 5000);
+*/
     getNational();
     getInter();
     getSports();
@@ -12,13 +23,16 @@ function getNational() {
 
     var ourRequest = new XMLHttpRequest();
     ourRequest.open('GET', 'https://newsapi.org/v1/articles?source=the-times-of-india&sortBy=latest&apiKey=69e7fad93b294937beb6ec4d16434e2c');
-    ourRequest.onloadstart = function() {
 
+    ourRequest.onloadstart = function() {
         loadnews.style.display = 'block';
     }
     ourRequest.onloadend = function() {
         loadnews.style.display = 'none';
+
     }
+
+
     ourRequest.onload = function() {
         if (ourRequest.status >= 200 && ourRequest.status < 400) {
             var ourData = JSON.parse(ourRequest.responseText);

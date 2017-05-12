@@ -1,4 +1,9 @@
-﻿function xyz() {
+﻿$(window).load(function() {
+    $(".loader").fadeOut("slow");
+
+});
+
+function xyz() {
     var btnifsc = document.getElementById('btnifsc');
     btnifsc.addEventListener('click', function(e) {
 

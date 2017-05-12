@@ -1,3 +1,8 @@
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+
+});
+
 function xyz() {
 
     var btnpin = document.getElementById('btnpin');

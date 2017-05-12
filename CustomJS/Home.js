@@ -1,6 +1,33 @@
+$(window).load(function() {
+    $(".loader").fadeOut("slow");
+
+});
+
 function xyz() {
+
     $('#qod').modal('show');
     getQuote();
+    $('#submit').click(function(e) {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('comment').value;
+        if (name == "" || email == "" || message == "") {
+            window.alert('all fields are mandatory');
+
+        } else {
+
+            $.ajax({
+                url: "https://formspree.io/rahul1993rks@live.com",
+                method: "POST",
+                data: { message: "hello" },
+                dataType: "json"
+            });
+            //e.preventDefault();
+            // $(this).get().reset();
+            window.alert('name' + name);
+
+        }
+    })
 
 
 }
